@@ -8,6 +8,7 @@ import Conta from '../components/configuracao/conta/Conta'
 import AlterarSenha from '../components/configuracao/conta/AlterarSenha'
 import DesativarConta from '../components/configuracao/conta/ExcluirConta'
 import AlterarInformacoes from '../components/configuracao/conta/AlterarInformacoes'
+import Tela from '../components/configuracao/acessibilidade/Tela'
 
 export const AppRoutes = () => {
     return (
@@ -28,6 +29,8 @@ export const AppRoutes = () => {
                         <Route path="conta/alterar-senha" element={<AlterarSenha />} />
                         <Route path="conta/excluir-conta" element={<DesativarConta />} />
                         <Route path="conta/alterar-informacoes" element={<AlterarInformacoes />} />
+
+                        <Route path="acessibilidade" element={<Tela />}></Route>
                     </Route>
 
                 </Routes>

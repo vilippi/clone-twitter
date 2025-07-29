@@ -8,8 +8,8 @@ const Configuracao = () => {
             <div className="min-h-screen grid grid-cols-[250px_1fr]">
 
                 {/* Sidebar esquerda */}
-                <aside className="bg-white border-r border-l border-gray-300 p-4">
-                    <h2 className="text-xl font-bold mb-6">Configurações</h2>
+                <aside className=" border-r border-l p-4 border-gray-300 bg-white ">
+                    <h2 className="text-xl font-bold mb-6 not-first:">Configurações</h2>
 
                     <nav className="flex flex-col gap-2 text-md font-medium">
                         <NavLink

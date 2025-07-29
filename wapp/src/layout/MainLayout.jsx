@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
                     {/* Topo: logo + links */}
                     <div className="flex flex-col">
                         <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
-                            <Origami size={35} /> Wapp
+                            <Origami size={35}/> Wapp
                         </h1>
                         <a href="/" className="w-fit inline-flex items-center font-semibold gap-2 px-4 py-2 rounded-full hover:bg-neutral-200 transition">
                             <House /> Início
