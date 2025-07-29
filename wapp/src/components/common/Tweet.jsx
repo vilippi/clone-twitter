@@ -19,7 +19,7 @@ const Tweet = ({ username, name, avatar, content, timestamp }) => {
     }
 
     return (
-        <div className="bg-white p-4 rounded-xl shadow-sm mb-4 flex gap-4">
+        <div className="w-full bg-white p-4 rounded-xl shadow-sm mb-4 flex gap-4">
 
             {/* Avatar */}
             <img
@@ -35,7 +35,7 @@ const Tweet = ({ username, name, avatar, content, timestamp }) => {
                     <span className="text-gray-500">@{username} · {timestamp}</span>
                 </div>
 
-                <p className="mt-1 text-gray-800">{content}</p>
+                <p className="mt-1 text-gray-800 break-words">{content}</p>
 
                 {/* Like */}
                 <div className="mt-3 flex items-center gap-2 text-sm text-gray-600">

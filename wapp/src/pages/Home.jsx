@@ -32,7 +32,7 @@ const Home = () => {
 
             <NovoTweet onPost={handleNovoTweet} />
 
-            <div className="max-w-xl">
+            <div className="w-full space-y-4">
                 {tweets.map((tweet, index) => (
                     <Tweet key={index} {...tweet} />
                 ))}

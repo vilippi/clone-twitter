@@ -1,12 +1,23 @@
 import { useState } from 'react'
 import { useAuth } from '../../context/AuthContext'
 
+const MAX_CHARS = 280
+
 const NovoTweet = ({ onPost }) => {
     const [conteudo, setConteudo] = useState('')
     const { user } = useAuth()
 
+    const charsRestantes = MAX_CHARS - conteudo.length
+    const corContador =
+        charsRestantes < 0
+            ? 'text-red-500'
+            : charsRestantes <= 20
+            ? 'text-yellow-500'
+            : 'text-gray-500'
+
+
     const handlePost = () => {
-        if (conteudo.trim() === '') return
+        if (conteudo.trim() === '' || conteudo.length > MAX_CHARS) return
 
         const novoTweet = {
             username: user.username,
@@ -31,10 +42,17 @@ const NovoTweet = ({ onPost }) => {
                 onChange={(e) => setConteudo(e.target.value)}
             />
 
-            <div className="flex justify-end mt-2">
+            <hr className="my-3 border-t border-gray-300" />
+
+            <div className="flex justify-between items-center mt-2">
+                <span className={`text-sm ${corContador}`}>
+                    {charsRestantes} caracteres restantes
+                </span>
+
                 <button
                     onClick={handlePost}
-                    className="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition"
+                    disabled={conteudo.trim() === '' || conteudo.length > MAX_CHARS}
+                    className="bg-blue-500 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-600 transition disabled:bg-gray-400"
                 >
                     Postar
                 </button>
