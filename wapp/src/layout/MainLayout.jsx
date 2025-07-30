@@ -7,6 +7,7 @@ import { PencilLine } from 'lucide-react';
 
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
+import MobileNav from '../components/common/MobileNav';
 
 const MainLayout = ({ children }) => {
 
@@ -15,10 +16,10 @@ const MainLayout = ({ children }) => {
     return (
 
         // Div que engloba tudo
-        <div className="min-h-screen grid grid-cols-12">
+        <div className="min-h-screen grid grid-cols-1 md:grid-cols-12">
             
             {/* Sidebar Fixa a esquerda (Menu) */}
-            <aside className="col-span-3 p-4 sticky top-0 h-screen dark:bg-neutral-700">
+            <aside className="hidden md:block md:col-span-3 p-4 sticky top-0 h-screen dark:bg-neutral-700">
                 <nav className="flex flex-col justify-between h-full">
 
                     {/* Topo: logo + links */}
@@ -56,12 +57,14 @@ const MainLayout = ({ children }) => {
             </aside>
 
             {/* TimeLine (Conteudo Principal) */}
-            <main className="col-span-6 p-4 bg-gray-100 dark:bg-neutral-700">
+            <main className="col-span-1 md:col-span-6 p-4 bg-white dark:bg-neutral-700">
                 {children}
             </main>
 
+            <MobileNav />
+
             {/* Sidebar Fixa a esquerda (Trends) */}
-            <aside className="col-span-3 p-4 dark:bg-neutral-700">
+            <aside className="hidden md:block md:col-span-3 p-4 dark:bg-neutral-700">
                 <div className="space-y-4">
                     <h1 className="text-2xl font-bold mb-6 dark:text-white">Em breve</h1>
                     <p className=" dark:text-white">

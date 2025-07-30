@@ -16,7 +16,7 @@ const SidebarLayout = ({ children }) => {
             <div className="min-h-screen grid grid-cols-12">
                 
                 {/* Sidebar Fixa a esquerda (Menu) */}
-                <aside className="col-span-3 p-4 sticky top-0 h-screen dark:bg-neutral-700">
+                <aside className="hidden md:block col-span-3 p-4 sticky top-0 h-screen dark:bg-neutral-700">
                     <nav className="flex flex-col justify-between h-full">
 
                         {/* Topo: logo + links */}
