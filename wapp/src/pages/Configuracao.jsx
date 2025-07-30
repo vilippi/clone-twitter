@@ -8,15 +8,15 @@ const Configuracao = () => {
             <div className="min-h-screen grid grid-cols-[250px_1fr]">
 
                 {/* Sidebar esquerda */}
-                <aside className=" border-r border-l p-4 border-gray-300 bg-white ">
-                    <h2 className="text-xl font-bold mb-6 not-first:">Configurações</h2>
+                <aside className=" border-r border-l p-4 border-gray-300 bg-white dark:bg-neutral-700 dark:border-neutral-800">
+                    <h2 className="text-xl font-bold mb-6 dark:text-white">Configurações</h2>
 
                     <nav className="flex flex-col gap-2 text-md font-medium">
                         <NavLink
                             to="/configuracao/conta"
                             className={({ isActive }) =>
-                                `px-4 py-2 rounded-lg transition ${
-                                    isActive ? 'bg-gray-200 text-black' : 'hover:bg-gray-100'
+                                `px-4 py-2 rounded-lg transition dark:text-white dark:hover:bg-neutral-800 ${
+                                    isActive ? 'bg-gray-200 dark:bg-neutral-800 text-black  ' : 'hover:bg-gray-100 '
                                 }`
                             }
                         >
@@ -26,8 +26,8 @@ const Configuracao = () => {
                         <NavLink
                             to="/configuracao/acessibilidade"
                             className={({ isActive }) =>
-                                `px-4 py-2 rounded-lg transition ${
-                                    isActive ? 'bg-gray-200 text-black' : 'hover:bg-gray-100'
+                                `px-4 py-2 rounded-lg transition dark:text-white dark:hover:bg-neutral-800 ${
+                                    isActive ? 'bg-gray-200 dark:bg-neutral-800 text-black  ' : 'hover:bg-gray-100 '
                                 }`
                             }
                         >
@@ -37,8 +37,8 @@ const Configuracao = () => {
                         <NavLink
                             to="/configuracao/recursos-adicionais"
                             className={({ isActive }) =>
-                                `px-4 py-2 rounded-lg transition ${
-                                    isActive ? 'bg-gray-200 text-black' : 'hover:bg-gray-100'
+                                `px-4 py-2 rounded-lg transition dark:text-white dark:hover:bg-neutral-800 ${
+                                    isActive ? 'bg-gray-200 dark:bg-neutral-800 text-black  ' : 'hover:bg-gray-100 '
                                 }`
                             }
                         >
@@ -48,8 +48,8 @@ const Configuracao = () => {
                         <NavLink
                             to="/configuracao/ajuda"
                             className={({ isActive }) =>
-                                `px-4 py-2 rounded-lg transition ${
-                                    isActive ? 'bg-gray-200 text-black' : 'hover:bg-gray-100'
+                                `px-4 py-2 rounded-lg transition dark:text-white dark:hover:bg-neutral-800 ${
+                                    isActive ? 'bg-gray-200 dark:bg-neutral-800 text-black  ' : 'hover:bg-gray-100 '
                                 }`
                             }
                         >
@@ -59,7 +59,7 @@ const Configuracao = () => {
                 </aside>
 
                 {/* Conteúdo à direita */}
-                <main className="p-4">
+                <main className="p-4 dark:bg-neutral-700">
                     <Outlet />
                 </main>
 

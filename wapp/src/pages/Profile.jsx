@@ -58,7 +58,7 @@ const Profile = () => {
         <MainLayout>
 
             {/* Header do perfil */}
-            <div className="border-b border-gray-300 pb-6 mb-6">
+            <div className="border-b border-gray-300 dark:border-neutral-500 pb-6 mb-6">
                 <div className="flex items-center gap-4">
                     <img
                         src={userData.avatar}
@@ -66,10 +66,10 @@ const Profile = () => {
                         className="w-20 h-20 rounded-full object-cover"
                     />
                     <div>
-                        <h2 className="text-2xl font-bold">{userData.name}</h2>
-                        <p className="text-gray-600">@{username}</p>
-                        <p className="mt-2 text-sm text-gray-700">{userData.bio}</p>
-                        <div className="flex gap-4 mt-2 text-sm">
+                        <h2 className="text-2xl font-bold dark:text-white">{userData.name}</h2>
+                        <p className="text-gray-600 dark:text-gray-400">@{username}</p>
+                        <p className="mt-2 text-sm text-gray-700 dark:text-white">{userData.bio}</p>
+                        <div className="flex gap-4 mt-2 text-sm dark:text-white">
                             <span><strong>{userData.following}</strong> seguindo</span>
                             <span><strong>{userData.followers}</strong> seguidores</span>
                         </div>
@@ -78,11 +78,11 @@ const Profile = () => {
             </div>
 
             {/* Abas */}
-            <div className="flex border-b border-gray-300 mb-4">
+            <div className="flex border-b border-gray-300 dark:border-neutral-500 mb-4">
                 <button
                     onClick={() => setAbaAtiva('tweets')}
                     className={`px-4 py-2 font-medium ${
-                        abaAtiva === 'tweets' ? 'border-b-4 border-blue-500 text-blue-500' : 'text-gray-500'
+                        abaAtiva === 'tweets' ? 'border-b-4 border-blue-500 text-blue-500' : 'text-gray-500 dark:text-white'
                     }`}
                 >
                     Tweets
@@ -90,7 +90,7 @@ const Profile = () => {
                 <button
                     onClick={() => setAbaAtiva('curtidos')}
                     className={`px-4 py-2 font-medium ${
-                        abaAtiva === 'curtidos' ? 'border-b-4 border-blue-500 text-blue-500' : 'text-gray-500'
+                        abaAtiva === 'curtidos' ? 'border-b-4 border-blue-500 text-blue-500' : 'text-gray-500 dark:text-white'
                     }`}
                 >
                     Curtidos

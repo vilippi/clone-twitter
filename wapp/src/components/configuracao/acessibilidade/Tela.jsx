@@ -1,27 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useTheme } from "../../../context/ThemeContext";
 
 const Tela = () => {
 
-    // Função Dark Mode
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        const saved = localStorage.getItem("darkMode");
-        if (saved !== null) return saved === "true";
-        return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    });
-
-    useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("darkMode", "true");
-        } else {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("darkMode", "false");
-        }
-    }, [isDarkMode]);
+    const { isDarkMode, toggleTheme } = useTheme();
 
     return (
-        <div className="space-y-6 dark:bg-neutral-800">
-            <h2 className="text-xl font-bold mb-2 dark:text-white">Acessibilidade</h2>
+        <div className="space-y-6 dark:bg-neutral-700">
+            <h2 className="text-xl font-bold mb-2 dark:text-white">
+                Acessibilidade
+            </h2>
             <p className="text-md mb-6 text-black dark:text-white ">
                 Personalize o modo de exibição do Wapp.
             </p>
@@ -32,7 +19,7 @@ const Tela = () => {
                 </span>
 
                 <button
-                    onClick={() => setIsDarkMode(!isDarkMode)} 
+                    onClick={toggleTheme}
                     className={`px-4 py-2 rounded-full text-sm font-semibold transition
                         ${isDarkMode
                             ? 'bg-blue-600 text-white hover:bg-blue-700'

@@ -28,7 +28,7 @@ const Home = () => {
 
     return (
         <MainLayout>
-            <h1 className="text-2xl font-bold mb-6">Página Inicial</h1>
+            <h1 className="text-2xl font-bold mb-6 dark:text-white">Página Inicial</h1>
 
             <NovoTweet onPost={handleNovoTweet} />
 

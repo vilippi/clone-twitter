@@ -15,8 +15,8 @@ const AlterarInformacoes = () => {
 
     return (
         <div className="space-y-6">
-            <h2 className="text-xl font-bold mb-2">Alterar informações</h2>
-            <p className="text-md text-gray-600 mb-4">
+            <h2 className="text-xl font-bold mb-2 dark:text-white">Alterar informações</h2>
+            <p className="text-md text-gray-600 mb-4 dark:text-white">
                 Atualize seus dados de perfil como nome de usuário, celular e email.
             </p>
 
@@ -27,37 +27,36 @@ const AlterarInformacoes = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
 
                 <div>
-                    <label className="block text-md font-medium mb-1">Nome de usuário</label>
-                    <div className="w-100 flex items-center border rounded px-3 py-2 bg-white text-sm">
-                        <span className="text-gray-400 mr-1">@</span>
+                    <label className="block text-md font-medium mb-1 dark:text-white">Nome de usuário</label>
+                    <div className="w-100 flex items-center border rounded px-3 py-2 bg-white dark:bg-neutral-800 dark:border-neutral-600 text-sm">
+                        <span className="text-gray-400 dark:text-gray-300 mr-1">@</span>
                         <input
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            className="flex-1 outline-none"
+                            className="flex-1 outline-none dark:text-white"
                             required
                         />
                     </div>
                 </div>
 
                 <div>
-                    <label className="block text-md font-medium mb-1">Celular</label>
+                    <label className="block text-md font-medium mb-1 dark:text-white">Celular</label>
                     <input
                         type="tel"
                         value={telefone}
                         onChange={(e) => setTelefone(e.target.value)}
-                        className="w-100 px-3 py-2 border rounded bg-white text-sm"
-                        placeholder="(99) 99999-9999"
+                        className="w-100 px-3 py-2 border rounded bg-white dark:bg-neutral-800 dark:border-neutral-600 text-sm"
                     />
                 </div>
 
                 <div>
-                    <label className="block text-md font-medium mb-1">Email</label>
+                    <label className="block text-md font-medium mb-1 dark:text-white">Email</label>
                     <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-100 px-3 py-2 border rounded bg-white text-sm"
+                        className="w-100 px-3 py-2 border rounded bg-white dark:bg-neutral-800 dark:border-neutral-600 text-sm"
                         required
                     />
                 </div>

@@ -16,18 +16,18 @@ const ExcluirConta = () => {
 
     return (
         <div className="space-y-6">
-            <h2 className="text-xl font-bold mb-4">Excluir conta</h2>
-            <p className="text-md text-gray-700 mb-6">
+            <h2 className="text-xl font-bold mb-4 dark:text-white">Excluir conta</h2>
+            <p className="text-md text-gray-700 mb-6 dark:text-white">
                 Esta ação <strong>não pode ser desfeita</strong>. Isso excluirá permanentemente sua conta, tweets e dados associados ao Wapp.
             </p>
 
             <div className="space-y-4">
-                <label className="inline-flex items-center">
+                <label className="inline-flex items-center dark:text-white">
                     <input
                         type="checkbox"
                         checked={confirmado}
                         onChange={() => setConfirmado(!confirmado)}
-                        className="mr-2"
+                        className="mr-2 "
                     />
                     Sim, desejo excluir minha conta permanentemente.
                 </label>

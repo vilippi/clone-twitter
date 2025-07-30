@@ -32,20 +32,20 @@ const NovoTweet = ({ onPost }) => {
     }
 
     return (
-        <div className="bg-white border border-gray-300 rounded-xl p-4 mb-6">
+        <div className="bg-white dark:bg-neutral-800 border border-gray-300 dark:border-neutral-700 rounded-xl p-4 mb-6">
 
             <textarea
-                className="w-full resize-none border-none focus:ring-0 outline-none text-gray-800"
+                className="w-full resize-none border-none focus:ring-0 outline-none text-gray-800 dark:text-white"
                 rows={3}
                 placeholder="O que está acontecendo?"
                 value={conteudo}
                 onChange={(e) => setConteudo(e.target.value)}
             />
 
-            <hr className="my-3 border-t border-gray-300" />
+            <hr className="my-3 border-t border-gray-300 dark:border-neutral-600" />
 
             <div className="flex justify-between items-center mt-2">
-                <span className={`text-sm ${corContador}`}>
+                <span className={`text-sm ${corContador} dark:text-neutral-400`}>
                     {charsRestantes} caracteres restantes
                 </span>
 

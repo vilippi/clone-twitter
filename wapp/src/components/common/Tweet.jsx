@@ -19,7 +19,7 @@ const Tweet = ({ username, name, avatar, content, timestamp }) => {
     }
 
     return (
-        <div className="w-full bg-white p-4 rounded-xl shadow-sm mb-4 flex gap-4">
+        <div className="w-full bg-white dark:bg-neutral-800 p-4 rounded-xl shadow-sm mb-4 flex gap-4">
 
             {/* Avatar */}
             <img
@@ -31,14 +31,14 @@ const Tweet = ({ username, name, avatar, content, timestamp }) => {
             {/* Conteúdo do tweet */}
             <div className="flex-1">
                 <div className="flex items-center gap-2">
-                    <span className="font-bold">{name}</span>
-                    <span className="text-gray-500">@{username} · {timestamp}</span>
+                    <span className="font-bold dark:text-white">{name}</span>
+                    <span className="text-gray-500 dark:text-gray-400">@{username} · {timestamp}</span>
                 </div>
 
-                <p className="mt-1 text-gray-800 break-words">{content}</p>
+                <p className="mt-1 text-gray-800 dark:text-white break-words">{content}</p>
 
                 {/* Like */}
-                <div className="mt-3 flex items-center gap-2 text-sm text-gray-600">
+                <div className="mt-3 flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                     <button onClick={toggleLike} className="flex items-center gap-1 hover:text-red-500 transition">
                         <Heart size={18} fill={liked ? 'red' : 'none'} strokeWidth={2} />
                         {likes}
