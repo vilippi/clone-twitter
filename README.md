@@ -36,5 +36,3 @@ O **Wapp** é um clone simples e funcional do Twitter (agora X), criado com **Vi
 
 ---
 
-## 📂 Estrutura de Pastas
-
